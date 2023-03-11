@@ -1,11 +1,11 @@
 # Tutorial
 
-aml_autoscript
+buka file bernama aml_autoscript lalu tambahkan script di bawah ini ↓↓
 
 if printenv bootfromsd; then exit; fi;
 if fatload mmc 0 0x1000000 u-boot.ext; then go 0x1000000; fi;
 
-boot.ini
+buka file bernama boot.ini lalu tambahkan script di bawah ini ↓↓
 
 if test "${devtype}" = ""; then setenv devtype "/dtb/amlogic/meson-gxl-s905x-p212.dtb"; fi
 if fatload ${devtype} ${devnum} 0x1000000 u-boot.ext; then go 0x1000000; fi;
